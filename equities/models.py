@@ -2,7 +2,7 @@ import os
 from equities.api import Client as api
 from equities import static as STATIC 
 
-__verison__ = STATIC.__verison__
+__version__ = STATIC.__version__
 __author__  = STATIC.__author__
 
 class Universe(object):
@@ -44,7 +44,7 @@ class Universe(object):
 
     def splits(self,cik_or_ticker):
         """returns a splits dataframe for the given cik or tickers"""
-        return self.api.spits(cik_or_ticker)
+        return self.api.splits(cik_or_ticker)
 
     def major_holders(self,cik_or_ticker):
         """returns a dataframe of major holders for the given cik or ticker"""

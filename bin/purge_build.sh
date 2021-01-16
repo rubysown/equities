@@ -8,6 +8,9 @@ case "$OSTYPE" in
                 rm -r dist;;
   win*)     echo "! Sorry purge_build.sh is incompatible with Windows. Try calling art/scripts/conductor.py manually." ; sleep 5;;
   msys*)    echo "Welcome to the equities/art build pipeline! :) "
+                rm -r equities.egg-info;
+                rm -r build;
+                rm -r dist;;
                 sleep 5;;
   cygwin*)  echo "! Sorry build_art.sh is incompatible with Cygwin. Try calling art/scripts/conductor.py manually." sleep 5; ;;
   bsd*)     echo "! Sorry build_art.sh is incompatible with BSD. Try calling art/scripts/conductor.py manually." sleep 5; ;;

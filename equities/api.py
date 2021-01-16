@@ -5,7 +5,7 @@ from solaris.api import Client as SolarisClient
 from pytrends.request import TrendReq as GoogleTrendClient
 import yfinance as YahooFinanceClient
 
-__verison__ = STATIC.__verison__
+__version__ = STATIC.__version__
 __author__  = STATIC.__author__
 
 class Client(object):
