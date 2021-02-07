@@ -95,10 +95,10 @@ class Client(object):
         """returns a dict mapping names to ciks"""
         return self._invert_dict(self.cik_to_name)
 
-    def prices(self,cik_or_ticker):
+    def prices(self,cik_or_ticker,period='max'):
         """returns a price dataframe for the given cik or tickers"""
         try:
-            return self._query_y_finance(cik_or_ticker).history(period='max')
+            return self._query_y_finance(cik_or_ticker).history(period=period)
         except Exception as e:
             return pd.DataFrame()
 
